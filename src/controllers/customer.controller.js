@@ -1,4 +1,4 @@
-const Customer = require("../schemas/Customer")
+const Customer = require("../models/Customer")
 
 const getCustomers = async (req, res) => {
     try {

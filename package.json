@@ -1,11 +1,11 @@
 {
-  "name": "p_mongodb",
+  "name": "crm-clientes-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",

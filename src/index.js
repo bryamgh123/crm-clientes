@@ -7,7 +7,7 @@ const config = require("./config/index");
 const BDConnection = require("./database/DBConnection");
 const producRoutes = require("./routes/product.routes");
 const customerRoutes = require("./routes/customer.routes");
-const { port } = require("./config/index");
+
 
 async function startExpressServer(params) {
     const app = express();
