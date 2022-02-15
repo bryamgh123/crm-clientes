@@ -1,10 +1,11 @@
-const {Router} = require("express");
 
-const {getCustomers, createCustomer, updateCustomer, deleteCustomer} = require("../controllers/customer.controller")
+const { Router } = require('express');
+
+const {getCustomer, createCustomer, updateCustomer, deleteCustomer} = require("../controllers/customer.controller")
 
 const router = Router();
 
-router.get("/get-customers", getCustomers);
+router.get("/get-customer", getCustomer);
 
 router.post("/create-customer", createCustomer);
 
