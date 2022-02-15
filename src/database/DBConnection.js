@@ -1,10 +1,10 @@
 const mongoose = require("mongoose")
 
-const url = "mongodb+srv://clase:g0XLjHFZ63xNzKLD@clase.pao3x.mongodb.net/test/crm-clientes";
+const config = require("../config/index");
 
 const DBconnection = async()=> {
     try{
-        await mongoose.connect(url)
+        await mongoose.connect(config.mongoUri)
         console.log('BD is conected')
     }catch(error){
         console.log(error);

@@ -1,10 +1,13 @@
-const express = require("express")
-const morgan = require("morgan")
-const cors = require("cors")
+const express = require("express");
+const morgan = require("morgan");
+const cors = require("cors");
 
-const BDConnection = require("./database/DBConnection")
-const producRoutes = require("./routes/product.routes")
-const customerRoutes = require("./routes/customer.routes")
+const config = require("./config/index");
+
+const BDConnection = require("./database/DBConnection");
+const producRoutes = require("./routes/product.routes");
+const customerRoutes = require("./routes/customer.routes");
+const { port } = require("./config/index");
 
 async function startExpressServer(params) {
     const app = express();
@@ -26,9 +29,9 @@ async function startExpressServer(params) {
 
     await BDConnection()
 
-    const PORT = 4800;
-    app.listen(PORT, ()=>{
-        console.log(`Server work in http://localhost:${PORT}`)
+    // const PORT = 4000;
+    app.listen(config.port, ()=>{
+        console.log(`Server work in http://localhost:${config.port}`);
     });
 }
 startExpressServer();
